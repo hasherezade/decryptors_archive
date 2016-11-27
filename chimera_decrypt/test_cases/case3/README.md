@@ -1,0 +1,1 @@
+This sample file (redist.txt.crypt) has been encrypted with the help of public key from the leaked set.
