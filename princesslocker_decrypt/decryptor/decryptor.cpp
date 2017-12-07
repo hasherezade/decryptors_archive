@@ -106,11 +106,11 @@ BOOL aes_decrypt_file(const wchar_t* filename, const wchar_t* filename2, const w
     HANDLE hInpFile = CreateFileW(filename, GENERIC_READ,FILE_SHARE_READ,NULL,OPEN_EXISTING,FILE_FLAG_SEQUENTIAL_SCAN,NULL);
     HANDLE hOutFile = CreateFileW(filename2, GENERIC_WRITE, 0,  NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);          
 
-    if (hInpFile == NULL) {
+    if (hInpFile == INVALID_HANDLE_VALUE) {
         printf("Cannot open input file!\n");
         return dwStatus;
     }
-    if (hOutFile == NULL) {
+    if (hOutFile == INVALID_HANDLE_VALUE) {
         printf("Cannot open output file!\n");
         return dwStatus;
     }
