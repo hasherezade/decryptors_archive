@@ -120,9 +120,9 @@ BOOL aes_decrypt_file(const wchar_t* filename, const wchar_t* filename2, const w
         }
         DWORD ciphertextLen = BLOCK_LEN;
         if (!CryptDecrypt(hKey, NULL, FALSE, 0,chunk, &ciphertextLen)) {
-                printf("failed!\n");
-                dwStatus = FALSE;
-                break;
+            printf("failed!\n");
+            dwStatus = FALSE;
+            break;
         } else {
             dwStatus = TRUE;
         }
